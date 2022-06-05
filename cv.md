@@ -31,11 +31,7 @@ occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
 ### Code Example :
 
 ``` 
-export const Hello = (props) => {
-return (
-    <div>${props.message}</div>
-   )
-}
+console.log("Hello")
 ```
 ***
 ### Courses :
