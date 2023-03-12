@@ -1,0 +1,235 @@
+:root {
+    --textFont: Josefin Sans, sans-serif;
+    --headersFont: Poppins, sans-serif;
+    --mainColor: #BADA55;
+    --accentColor: #f79205;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: var(--textFont);
+    padding: 5px;
+    line-height: 1.4;
+    color: white;
+}
+
+h1, h2 {
+    display: flex;
+    justify-content: center;
+    font-family: var(--headersFont);
+    letter-spacing: 1px;
+    color: white;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    left: auto;
+    top: 45px;
+    background-color: var(--mainColor);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-family: var(--headersFont);
+    color: var(--mainColor);
+}
+
+header, footer{
+    font-family: var(--textFont);
+    font-size: 16px;
+    width: 100%;
+    height: 80px;
+    background-color: var(--mainColor);
+    color: white;
+}
+
+.header-container, .footer-container{
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.nav-link {
+    padding-left: 20px;
+}
+
+
+main {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    background-color: #343a40;
+}
+
+.main-container {
+    width: 1440px;
+    min-height: 100vh;
+}
+
+.me {
+    display: flex;
+    justify-content: space-around;
+}
+
+.me-avatar {
+    display: block;
+    border-radius: 50%;
+}
+
+.photo-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 15px 0;
+    border-bottom: 5px solid var(--mainColor);
+}
+
+.me-card-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    border-bottom: 5px solid var(--mainColor);
+}
+
+.me-card {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.card-block {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card-block::before {
+    content: "";
+    position: absolute;
+    width: 49%;
+    height: 1px;
+    top: 100%;
+    background-color: var(--mainColor);
+}
+
+.card-block::after {
+    content: "";
+    position: absolute;
+    width: 49%;
+    height: 1px;
+    top: 100%;
+    right: 0;
+    background-color: var(--mainColor);
+}
+
+.card {
+    position: relative;
+    width: 49%;
+    height: 100%;
+    padding: 5px;
+}
+
+.list {
+    font-family: var(--textFont);
+    padding: 5px;
+    line-height: 1.4;
+    color: white;
+    list-style-type: none;
+}
+
+.green-filter {
+    filter: invert(98%) sepia(31%) saturate(5799%) hue-rotate(10deg) brightness(101%) contrast(65%);
+}
+
+.accent-coloring {
+    color: var(--mainColor);
+}
+
+.code-snippet {
+    color: var(--mainColor);
+}
+
+.footer-container{
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color : white;
+}
+
+a:hover{
+    color: var(--accentColor);
+}
+
+@media screen and (max-width: 752px) {
+    .header-container{
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .me{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul{
+        padding:5px;
+    }
+    .card-block{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-block::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 100%;
+        background-color: var(--mainColor);
+    }
+    .card-block::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 100%;
+        right: 0;
+        background-color: var(--mainColor);
+    }
+}
+
